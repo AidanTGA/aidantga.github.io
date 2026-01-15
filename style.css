@@ -282,6 +282,12 @@ a {
     text-wrap: nowrap;
 }
 
+.blogImagen {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 /*quienes somos especifico*/
 
 .qsFoto {
@@ -737,21 +743,33 @@ th {
 
     .twitTexto {
         margin: 0px 10px;
-        color: var(--azul_600);
+        color: var(--azul_800);
+        font-family: Archivo;
+        font-size: 15px;
     }
 
     .twitContenido {
         margin: 0px 10px;
+        font-family: Archivo;
+        font-size: 15px;
     }
 
     .instaRedes {
-        width: 600px;
+        width: 700px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
     }
 
+    .twitTarjeta {
+        width: 450px;
+        height: 108px;
+    }
+
+    .twitIcono {
+        width: 48px;
+    }
 
 
     /*quienes somos*/
@@ -849,7 +867,8 @@ th {
         margin: 1em auto;
     }
 
-    .userFoto, .userFotoComentario {
+    .userFoto,
+    .userFotoComentario {
         width: 55px;
         height: 55px;
     }
