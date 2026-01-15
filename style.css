@@ -1,0 +1,932 @@
+@font-face {
+    font-family: "archivo";
+    src: url(assets/Archivo/Archivo-VariableFont_wdth\,wght.ttf) format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "lobster";
+    src: url(assets/Lobster/Lobster-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --verde_300: #aeca8c;
+    --verde_400: #8bb05e;
+    --verde_600: #597937;
+    --verde_800: #394c28;
+
+    --azul_300: #b2c0de;
+    --azul_400: #8d9fcd;
+    --azul_600: #5d69b0;
+    --azul_800: #484d85;
+
+    --rojo_300: #f4b6ad;
+    --rojo_400: #ec8b7d;
+    --rojo_600: #cc4936;
+
+    --neutro_1: #f3f8ed;
+    --neutro_2: #fdf4f3;
+
+    --font_1: "archivo", sans-serif;
+    --font_2: "lobster", serif;
+}
+
+body,
+html {
+    margin: 0;
+}
+
+.head {
+    background-color: var(--azul_400);
+    margin: 0;
+}
+
+.hMenu {
+    float: right;
+    width: 54px;
+    margin-right: 20px;
+    margin-top: 7px;
+}
+
+.linksNav {
+    /* sin finalizar */
+    visibility: hidden;
+    margin: 0;
+    height: 108px;
+}
+
+.logoCaja {
+    width: 180px;
+    height: 180px;
+    background-color: var(--neutro_1);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    transform: translatey(-85px);
+    display: flex;
+}
+
+.logo {
+    align-self: center;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+p {
+    font-family: var(--font_1);
+    font-size: 16px;
+    line-height: 120%;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: var(--font_2);
+    font-size: 49px;
+}
+
+h2 {
+    font-family: var(--font_2);
+    font-size: 39px;
+    line-height: 120%;
+    text-align: center;
+}
+
+/*landing  quienes somos */
+
+.sectionHeaderLanding {
+    background-image: url(assets/AdobeStock_561762992.jpeg);
+    background-size: cover;
+    background-position: 75%;
+    margin-top: 25px;
+}
+
+.sectionHeaderQS {
+    background-image: url(assets/AdobeStock_499245004.jpeg);
+    background-size: cover;
+    background-position: 75%;
+    margin-top: 25px;
+}
+
+.sectionHeaderEventos {
+    background-image: url(assets/AdobeStock_1389384683.jpeg);
+    background-size: cover;
+    background-position: 75%;
+    margin-top: 25px;
+}
+
+.sectionHeaderComunidad {
+    background-image: url(assets/AdobeStock_1739234904.jpeg);
+    background-size: cover;
+    background-position: 75%;
+    margin-top: 25px;
+}
+
+.sectionHeaderQS>h1 {
+    color: black;
+}
+
+.qs_landing_box {
+    background-color: var(--neutro_1);
+    padding-top: 5px;
+}
+
+#quienesSomosLanding .imagen {
+    width: 80%;
+    padding: 25px;
+}
+
+#quienesSomosLanding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* estilo botones*/
+
+.boton {
+    background-color: var(--verde_400);
+    border: 1px solid transparent;
+    /* trasnsparent para cubrir el border radius no gradiente */
+    border-radius: 14px;
+    background:
+        linear-gradient(var(--verde_400), var(--verde_400)) padding-box,
+        /*cubre el fondo real*/
+        linear-gradient(75deg, var(--verde_300), var(--azul_600)) border-box;
+    /*degradaddo que se vera en el borde*/
+    display: flex;
+    width: 92px;
+    height: 22px;
+    padding: 14px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.boton,
+a {
+    text-decoration: none;
+    color: black;
+    font-family: var(--font_1);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 20px auto;
+}
+
+/* redes */
+
+.instaTrjeta {
+    background-color: var(--neutro_1);
+    width: 214px;
+    height: 272px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 15px;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(var(--neutro_1), var(--neutro_1)) padding-box,
+        /*cubre el fondo real*/
+        linear-gradient(75deg, var(--verde_300), var(--azul_600)) border-box;
+    /*degradaddo que se vera en el borde*/
+}
+
+.instaImagen {
+    width: 184px;
+    height: 182px;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+.instaTexto {
+    font-family: var(--font_1);
+    font-size: 18px;
+    text-align: center;
+}
+
+.instaRedes {
+    margin-bottom: 4em;
+}
+
+/*twt redes*/
+
+.twitTarjeta {
+    width: 376px;
+    height: 82px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: auto;
+    margin-bottom: 15px;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(var(--neutro_2), var(--neutro_2)) padding-box,
+        /*cubre el fondo real*/
+        linear-gradient(75deg, var(--verde_300), var(--azul_600)) border-box;
+    /*degradaddo que se vera en el borde*/
+}
+
+.twitCage {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.twitTexto {
+    margin: 0px 10px;
+    color: var(--azul_600);
+}
+
+.twitTexto,
+.twitContenido {
+    font-family: var(--font_1);
+    font-size: 13px;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+.twitIcono {
+    margin: 10px;
+}
+
+/*caniblog landing*/
+.caniblog {
+    background-color: var(--neutro_2);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.fecha {
+    margin-top: 0px;
+    font-weight: lighter;
+}
+
+.caniblog>.boton {
+    text-wrap: nowrap;
+}
+
+/*quienes somos especifico*/
+
+.qsFoto {
+    width: 100%;
+    margin: 0em 0em 0 2em 0em;
+}
+
+.quienesSomos {
+    margin: 5em 0em;
+}
+
+.botonesCage {
+    display: flex;
+}
+
+/*comunidad*/
+.postCaja {
+    background-color: var(--neutro_2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 376px;
+    height: auto;
+    justify-items: center;
+    margin: 1em auto;
+
+}
+
+.topCaja {
+    background-color: var(--verde_400);
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.bottomCaja {
+    display: flex;
+    flex-direction: column;
+}
+
+.userFoto {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 11px;
+    margin-bottom: 6px;
+    margin-left: 21px;
+    margin-right: 30px;
+}
+
+.botonLimpio {
+    margin: 5px 15px 1em 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.botonLimpio>img {
+    margin: 0px 0px 0em 10px;
+}
+
+.tituloPost {
+    width: 184px;
+    height: 39px;
+    border-radius: 10px;
+    border-color: transparent;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(white) padding-box,
+        /*cubre el fondo real*/
+        linear-gradient(75deg, var(--neutro_2), var(--rojo_600)) border-box;
+    outline: none;
+    /* evita el borde/halo extra */
+    box-shadow: none;
+    margin: 11px auto 12px auto;
+}
+
+.textoPost {
+    width: 337px;
+    height: 75px;
+    border-radius: 10px;
+    border-color: transparent;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(white) padding-box,
+        /*cubre el fondo real*/
+        linear-gradient(75deg, var(--neutro_2), var(--rojo_600)) border-box;
+    outline: none;
+    /* evita el borde/halo extra */
+    box-shadow: none;
+    margin: 10px auto 0px auto;
+}
+
+.userFotoComentario {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 6px;
+    margin-left: 21px;
+    margin-right: 30px;
+    transform: translate(-5px, 35px);
+}
+
+.cometarioImagen {
+    width: 100%;
+    margin: 8px auto;
+    width: 332px;
+    object-fit: fill;
+}
+
+.textoComentario {
+    margin: 8px 17px;
+}
+
+.iconComentario {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 2px 15px;
+}
+
+.iconComentario>.like,
+.coment {
+    margin: 5px;
+
+}
+
+.line {
+    border-top: 1px solid #000000;
+    width: 178px;
+    margin: auto;
+}
+
+.cajaUserTransparente {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.cajaTextoComentario {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.cajaTextoComentario>p {
+    grid-column: 2 / span 4;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 11px;
+}
+
+.comentarioTextarea>.textoPost {
+    margin: 13px 14px 0px 14px;
+    padding: 0px;
+    width: 312px;
+}
+
+.comentarioTextarea {
+    padding-bottom: 3px;
+    margin: 0px 11px 27px 25px;
+    border-radius: 10px;
+    background-color: var(--verde_300);
+}
+
+.filtro {
+    margin: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.postFecha {
+    align-self: flex-end;
+    margin: 0px 15px 2px auto;
+    font-size: 13px;
+}
+
+/* Tabla eventos de landing y eventos */
+
+.calendarioCard {
+    width: 375px;
+    height: auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto 19px;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(var(--neutro_1)) padding-box,
+        /*cubre el fondo real*/
+        linear-gradient(75deg, var(--verde_300), var(--azul_600)) border-box;
+    /*degradaddo que se vera en el borde*/
+}
+
+.selectorMes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tablaMes {
+    width: 343px;
+    height: 256px;
+    margin: auto auto 16px auto;
+}
+
+td,
+.mes {
+    font-size: 25px;
+}
+
+th {
+    font-size: 16px;
+    color: grey;
+}
+
+.eventoTarjeta {
+    min-width: 376px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1em 19px auto 19px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background:
+        linear-gradient(var(--neutro_2)) padding-box,
+        /*cubre el fondo real*/
+        linear-gradient(75deg, var(--verde_300), var(--azul_600)) border-box;
+    /*degradaddo que se vera en el borde*/
+}
+
+.iconoActividad {
+    padding: 13px;
+    margin: 16px 16px 16px 20px;
+    border-radius: 14px;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(var(--verde_400)) padding-box,
+        /*cubre el fondo real*/
+        linear-gradient(75deg, var(--verde_300), var(--azul_600)) border-box;
+    /*degradaddo que se vera en el borde*/
+}
+
+.datosEvento {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.nivelEvento {
+    transform: rotateZ(-90deg);
+    margin: 0px 0px 0px 10px;
+}
+
+/*footer*/
+.logoBox {
+    background-color: var(--neutro_1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 19px 0px 19px;
+    padding: 1em 0px 1em 0px;
+    gap: 2em;
+}
+
+.logoFooter {
+    width: 184px;
+    height: 153px;
+}
+
+.extLogoBox {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.extLogoBox>img {
+    width: 71px;
+}
+
+.linkBox {
+    background-color: var(--neutro_1);
+    padding: 1em 1em;
+}
+
+.linkBox>a {
+    margin: 5px;
+}
+
+
+
+/*media quiueries*/
+
+@media (min-width: 1024px) {
+    .boton {
+        height: 50px;
+        min-width: 200px;
+    }
+
+    .boton>img {
+        transform: scale(2);
+    }
+
+    .boton,
+    a {
+        font-size: 19px;
+        font-weight: 400;
+        margin: 20px auto;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-left: 259px;
+        margin-right: 259px;
+    }
+
+    p {
+        font-family: var(--font_1);
+        font-size: 19px;
+        line-height: 120%;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+        font-family: var(--font_2);
+        font-size: 128px;
+    }
+
+    h2 {
+        font-family: var(--font_2);
+        font-size: 59px;
+        line-height: 160%;
+        text-align: center;
+    }
+
+    .instaTrjeta {
+        width: 330px;
+        height: 341px;
+    }
+
+    .instaImagen {
+        width: 284px;
+        height: 234px;
+    }
+
+    .instaTexto {
+        font-size: 16px;
+    }
+
+    /*HEADER*/
+    .head {
+        min-height: 146px;
+    }
+
+    .linksNav {
+        min-height: 146px;
+        float: right;
+        margin: auto auto;
+        visibility: visible;
+        display: flex;
+        align-items: last baseline;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .linksNav>li {
+        background-color: var(--verde_400);
+        border: 2px solid transparent;
+        /* trasnsparent para cubrir el border radius no gradiente */
+        border-radius: 14px;
+        background:
+            linear-gradient(var(--verde_400), var(--verde_400)) padding-box,
+            /*cubre el fondo real*/
+            linear-gradient(75deg, var(--verde_300), var(--azul_600)) border-box;
+        /*degradaddo que se vera en el borde*/
+        display: flex;
+        min-width: 100px;
+        height: auto;
+        padding: 14px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 10px;
+        font-size: 19px;
+    }
+
+    .linksNav>li>a {
+        display: flex;
+        align-items: center;
+        margin: auto;
+    }
+
+    .hMenu {
+        visibility: hidden;
+    }
+
+    .logoCaja {
+        width: 336px;
+        height: 336px;
+        float: left;
+        transform: translatey(-150px);
+        margin-left: 1em;
+    }
+
+    /*landing*/
+    .sectionHeaderLanding {
+        width: 100%;
+        min-height: 530px;
+        margin-bottom: 2em;
+    }
+
+    .sectionHeaderLanding>h1 {
+        padding-top: 500px;
+    }
+
+    #quienesSomosLanding .imagen {
+        width: 531px;
+        height: 354px;
+    }
+
+    #quienesSomosLanding {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .redesBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+        margin-bottom: 4em;
+    }
+
+    .twitTexto {
+        margin: 0px 10px;
+        color: var(--azul_600);
+    }
+
+    .twitContenido {
+        margin: 0px 10px;
+    }
+
+    .instaRedes {
+        width: 600px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+
+    /*quienes somos*/
+
+    .sectionHeaderQS {
+        width: 100%;
+        min-height: 530px;
+        margin-bottom: 2em;
+    }
+
+    .sectionHeaderQS>h1 {
+        padding-top: 500px;
+    }
+
+    .ainaBox {
+        background-color: var(--neutro_2);
+        margin-bottom: 0px;
+    }
+
+    .mateoBox {
+        background-color: var(--neutro_1);
+        margin-top: 0px;
+        padding-bottom: 3em;
+    }
+
+    .ainaBox>h2,
+    .mateoBox>h2 {
+        margin: 0%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+
+    .aina {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 5em;
+    }
+
+    .aina .qsFoto {
+        width: 567px;
+        object-fit: cover;
+    }
+
+    .aina>p {
+        max-width: 566px;
+        margin: 0em 0em 0em 2em;
+    }
+
+    .mateo {
+        background-color: var(--neutro_1);
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .mateo .qsFoto {
+        width: 567px;
+        object-fit: cover;
+    }
+
+    .mateo>p {
+        max-width: 566px;
+        margin: 0em 2em 0em 0em;
+    }
+
+    .somosClub {
+        margin-bottom: 5em;
+    }
+
+    .somosClub>.instaRedes {
+        width: 80%;
+        margin: 0 auto;
+        gap: 78px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    /*comunidad*/
+    .sectionHeaderComunidad {
+        width: 100%;
+        min-height: 530px;
+        margin-bottom: 2em;
+    }
+
+    .sectionHeaderComunidad>h1 {
+        padding-top: 500px;
+    }
+
+    .postCaja {
+        min-width: 910px;
+        margin: 1em auto;
+    }
+
+    .userFoto, .userFotoComentario {
+        width: 55px;
+        height: 55px;
+    }
+
+    .botonLimpio>img {
+        transform: scale(2);
+        margin: 0px 0px 0em 10px;
+    }
+
+    .tituloPost {
+        width: 333px;
+        height: 39px;
+    }
+
+    .textoPost {
+        width: 853px;
+        height: 143px;
+    }
+
+    .textoComentario {
+        font-family: Archivo;
+        font-size: 19px;
+        margin: 8px 17px;
+    }
+
+    /*eventos*/
+    .eventos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .sectionHeaderEventos {
+        width: 100%;
+        min-height: 530px;
+        margin-bottom: 2em;
+    }
+
+    .sectionHeaderEventos>h1 {
+        padding-top: 500px;
+    }
+
+    /* calendario y tarjetas*/
+    .calendarioCard {
+        width: 683px;
+    }
+
+    .tablaMes {
+        width: 651px;
+        height: 514px;
+    }
+
+    td,
+    .mes {
+        font-size: 30px;
+        margin: 40px 100px;
+    }
+
+    /*footer*/
+    .linkBox>a {
+        font-size: 19px;
+        margin: 15px;
+    }
+
+    .logoFooter {
+        width: 260px;
+        height: 216px;
+    }
+
+    .extLogoBox>img {
+        width: 137px;
+        margin: auto 2em;
+    }
+
+    .arrowR,
+    .arrowL {
+        transform: scale(2);
+    }
+}
