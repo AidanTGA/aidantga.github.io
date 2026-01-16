@@ -37,6 +37,7 @@
 body,
 html {
     margin: 0;
+    font-family: var(--font_1);
 }
 
 .head {
@@ -232,7 +233,6 @@ a {
     border-radius: 15px;
     display: flex;
     justify-content: left;
-    align-items: left;
     margin: auto;
     margin-bottom: 15px;
     border: 2px solid transparent;
@@ -292,7 +292,7 @@ a {
 
 .qsFoto {
     width: 100%;
-    margin: 0em 0em 0 2em 0em;
+    margin: 0em 0em 2em 0em;
 }
 
 .quienesSomos {
@@ -304,6 +304,10 @@ a {
 }
 
 /*comunidad*/
+.filtroDskt {
+    visibility: hidden;
+}
+
 .postCaja {
     background-color: var(--neutro_2);
     border-radius: 10px;
@@ -360,7 +364,7 @@ a {
     border-color: transparent;
     border: 2px solid transparent;
     background:
-        linear-gradient(white) padding-box,
+        linear-gradient(white, white) padding-box,
         /*cubre el fondo real*/
         linear-gradient(75deg, var(--neutro_2), var(--rojo_600)) border-box;
     outline: none;
@@ -376,7 +380,7 @@ a {
     border-color: transparent;
     border: 2px solid transparent;
     background:
-        linear-gradient(white) padding-box,
+        linear-gradient(white, white) padding-box,
         /*cubre el fondo real*/
         linear-gradient(75deg, var(--neutro_2), var(--rojo_600)) border-box;
     outline: none;
@@ -483,7 +487,7 @@ a {
     margin: 2em auto 19px;
     border: 2px solid transparent;
     background:
-        linear-gradient(var(--neutro_1)) padding-box,
+        linear-gradient(var(--neutro_1), var(--neutro_1)) padding-box,
         /*cubre el fondo real*/
         linear-gradient(75deg, var(--verde_300), var(--azul_600)) border-box;
     /*degradaddo que se vera en el borde*/
@@ -522,7 +526,7 @@ th {
     border: 2px solid transparent;
     border-radius: 10px;
     background:
-        linear-gradient(var(--neutro_2)) padding-box,
+        linear-gradient(var(--neutro_2), var(--neutro_2)) padding-box,
         /*cubre el fondo real*/
         linear-gradient(75deg, var(--verde_300), var(--azul_600)) border-box;
     /*degradaddo que se vera en el borde*/
@@ -534,7 +538,7 @@ th {
     border-radius: 14px;
     border: 2px solid transparent;
     background:
-        linear-gradient(var(--verde_400)) padding-box,
+        linear-gradient(var(--verde_400), var(--verde_400)) padding-box,
         /*cubre el fondo real*/
         linear-gradient(75deg, var(--verde_300), var(--azul_600)) border-box;
     /*degradaddo que se vera en el borde*/
@@ -852,6 +856,19 @@ th {
     }
 
     /*comunidad*/
+    .filtro {
+        visibility: hidden;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .post {
+        margin: 0 auto;
+    }
+
     .sectionHeaderComunidad {
         width: 100%;
         min-height: 530px;
@@ -891,7 +908,64 @@ th {
     .textoComentario {
         font-family: Archivo;
         font-size: 19px;
-        margin: 8px 17px;
+        margin: 21px 18px;
+
+    }
+
+    .like,
+    .coment {
+        width: 48px;
+    }
+
+    .comentarioTextarea>.textoPost {
+        width: 798px;
+    }
+
+    .comentarioTextarea {
+        width: 851px;
+    }
+
+    .cometarioImagen {
+        width: 683px;
+        height: 231px;
+        object-fit: cover;
+    }
+
+    .filtroDskt {
+        visibility: visible;
+        background-color: var(--neutro_2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        transform: translateY(-86px);
+    }
+
+    .cajaFiltro {
+        margin: 1em;
+    }
+
+    .opcion {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--verde_300);
+        border-radius: 0px 0px 10px 10px;
+        gap: 8px;
+        padding: 15px 5px 15px 0px;
+    }
+
+    .valor {
+        background-color: var(--azul_400);
+        border-radius: 10px;
+        text-align: center;
+        margin: 1em;
+        width: 150px;
+    }
+
+    .tipoOpcion {
+        display: flex;
+        flex-direction: row;
+        margin: 0 5px 0px 10px;
     }
 
     /*eventos*/
