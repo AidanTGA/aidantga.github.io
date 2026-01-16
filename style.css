@@ -980,6 +980,7 @@ th {
 
     .cajaFiltro {
         margin: 1em;
+         background-color: var(--neutro_2);
     }
 
     .opcion {
