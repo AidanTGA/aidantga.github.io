@@ -41,14 +41,14 @@
             <h1>Comunidad</h1>
         </div>
         <!-- seccion crea post -->
-        <div class="contenedor">
-            <aside class="filtroDskt">
-                <div class="cajaFiltro">
-                    <div class="cajaValores">
-                        <div class="valor">
+        <div class="contenedor"><!-- es un contenedor generalista -->
+            <aside class="filtroDskt"><!-- contiene los filtros del desktop -->
+                <div class="cajaFiltro"> <!-- la caja de cada seccion? revisar -->
+                    <div class="cajaValores"> 
+                        <div class="valor"><!-- cada seccion y su titulo -->
                             Fecha
-                            <div class="opcion">
-                                <div class="tipoOpcion">
+                            <div class="opcion"><!-- por encima, cada una de las opciones -->
+                                <div class="tipoOpcion"><!-- caja con el checkbox y su label -->
                                     <input type="checkbox" id="hoy" name="hoy" value="hoy">
                                     <label for="hoy">hoy</label>
                                 </div>
@@ -151,19 +151,19 @@
                     </div>
                 </div>
             </aside>
-            <div class="post">
-                <div class="postCaja">
-                    <div class="topCaja">
-                        <span><img class="userFoto" src="assets/AdobeStock_1290259101.jpeg" alt="foto usuario"></span>
-                        <span><input type="text" class="tituloPost"></span>
+            <div class="post"><!-- primera caja, para posetar el usuario, se deberia revisar para aumentar con el tamaño al escrubir -->
+                <div class="postCaja"><!-- caja base -->
+                    <div class="topCaja"><!-- parte superior de la caja -->
+                        <span><img class="userFoto" src="assets/AdobeStock_1290259101.jpeg" alt="foto usuario"></span> <!-- usuario -->
+                        <span><input type="text" class="tituloPost"></span><!-- input para el titulo -->
                     </div>
-                    <div class="bottomCaja">
-                        <textarea class="textoPost" placeholder="¿Alguna novedad?"></textarea>
+                    <div class="bottomCaja"><!-- parte inferior -->
+                        <textarea class="textoPost" placeholder="¿Alguna novedad?"></textarea> 
                         <a href="#" class="botonLimpio"> Enviar <img
-                                src="assets/small/send_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg " alt=""></a>
+                                src="assets/small/send_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg " alt=""></a><!-- para enviar el post escrtito, es plano ahora mismo -->
                     </div>
                 </div>
-                <div class="filtro">
+                <div class="filtro"><!-- en formato movil aqui nacen los filtros -->
                     <img src="assets/small/filter_alt_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg" alt="icono filtro">
                     filtro
                 </div>
@@ -294,3 +294,4 @@
         </div>
     </footer>
 </body>
+</html>
