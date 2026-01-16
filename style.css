@@ -12,6 +12,8 @@
     font-style: normal;
 }
 
+/*se suben tipografias*/
+/*rooteo de las variables de color y texto*/
 :root {
     --verde_300: #aeca8c;
     --verde_400: #8bb05e;
@@ -34,12 +36,14 @@
     --font_2: "lobster", serif;
 }
 
+/*preparacion del documenot*/
 body,
 html {
     margin: 0;
     font-family: var(--font_1);
 }
 
+/*header*/
 .head {
     background-color: var(--azul_400);
     margin: 0;
@@ -67,6 +71,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     z-index: 2;
+    /*para la colocacion adecuada en el panel general*/
     transform: translatey(-85px);
     display: flex;
 }
@@ -85,6 +90,8 @@ h6 {
     margin-left: 18px;
     margin-right: 18px;
 }
+
+/*generales movil*/
 
 p {
     font-family: var(--font_1);
@@ -106,8 +113,9 @@ h2 {
     text-align: center;
 }
 
+/*a partir de h3 se utiliza fuente normal de p*/
 /*landing  quienes somos */
-
+/*se añaden todas las imagenes frontales de seccion de todas las paginas*/
 .sectionHeaderLanding {
     background-image: url(assets/AdobeStock_561762992.jpeg);
     background-size: cover;
@@ -139,6 +147,8 @@ h2 {
 .sectionHeaderQS>h1 {
     color: black;
 }
+
+/*es cambio para mejor visibilidad, pero no queda igual que en el diseño, repasar con diseño*/
 
 .qs_landing_box {
     background-color: var(--neutro_1);
@@ -187,9 +197,21 @@ a {
     margin: 20px auto;
 }
 
+.boton:hover {
+    /*hay que revisar por que los icones no se pueden modificar desde css el color, o bien se suben dos y se hidean o se sube directo en css*/
+    background:
+        linear-gradient(var(--verde_600), var(--verde_600)) padding-box,
+        /*cubre el fondo real*/
+        linear-gradient(75deg, var(--verde_300), var(--azul_600)) border-box;
+    /*degradaddo que se vera en el borde*/
+    color: white;
+}
+
+
 /* redes */
 
 .instaTrjeta {
+    /*se reutiliza en todo el resto de la pagina a pesar de estar en landing*/
     background-color: var(--neutro_1);
     width: 214px;
     height: 272px;
@@ -201,10 +223,13 @@ a {
     margin: auto;
     margin-bottom: 15px;
     border: 2px solid transparent;
+    /*se tiene que realizar este metodo de background con padding y border box porque border no admite degradado de forma nativa, se indican bordes pero transparantes*/
     background:
         linear-gradient(var(--neutro_1), var(--neutro_1)) padding-box,
+        /*esto colorea el fondo*/
         /*cubre el fondo real*/
         linear-gradient(75deg, var(--verde_300), var(--azul_600)) border-box;
+    /*esto colorea el borde*/
     /*degradaddo que se vera en el borde*/
 }
 
@@ -305,7 +330,10 @@ a {
 
 /*comunidad*/
 .filtroDskt {
+    /*en movil esta parte esta oculta*/
     visibility: hidden;
+    width: 0PX;
+    height: 0px;
 }
 
 .postCaja {
@@ -398,6 +426,7 @@ a {
     margin-left: 21px;
     margin-right: 30px;
     transform: translate(-5px, 35px);
+    /*para la correcta colocacion de la imagen de usuario*/
 }
 
 .cometarioImagen {
@@ -421,7 +450,7 @@ a {
 .iconComentario>.like,
 .coment {
     margin: 5px;
-
+    width: 24PX;
 }
 
 .line {
@@ -508,10 +537,12 @@ a {
 
 td,
 .mes {
+    /*numero del dia*/
     font-size: 25px;
 }
 
 th {
+    /*dias de la semana*/
     font-size: 16px;
     color: grey;
 }
@@ -557,13 +588,14 @@ th {
 
 /*footer*/
 .logoBox {
+    /*ordena el contenedor general de logos*/
     background-color: var(--neutro_1);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 2em 19px 0px 19px;
-    padding: 1em 0px 1em 0px;
+    margin: 2em 0px 0px 0px;
+    padding: 1em 19px 1em 19px;
     gap: 2em;
 }
 
@@ -573,6 +605,7 @@ th {
 }
 
 .extLogoBox {
+    /*crea el layout de todos los logos patrocinadores*/
     display: flex;
     flex-direction: row;
     gap: 1em;
@@ -602,7 +635,7 @@ th {
         min-width: 200px;
     }
 
-    .boton>img {
+    .boton>img {/*aumento de los icones*/
         transform: scale(2);
     }
 
@@ -612,7 +645,7 @@ th {
         font-weight: 400;
         margin: 20px auto;
     }
-
+/*generalidades*/
     p,
     h1,
     h2,
@@ -643,7 +676,7 @@ th {
         line-height: 160%;
         text-align: center;
     }
-
+/*tarjetas principales*/
     .instaTrjeta {
         width: 330px;
         height: 341px;
@@ -663,7 +696,7 @@ th {
         min-height: 146px;
     }
 
-    .linksNav {
+    .linksNav {/*layout ahora que es visible*/
         min-height: 146px;
         float: right;
         margin: auto auto;
@@ -759,7 +792,7 @@ th {
     }
 
     .instaRedes {
-        width: 700px;
+        width: 700px;/*evitamos que ocupe todo*/
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -777,7 +810,8 @@ th {
 
 
     /*quienes somos*/
-
+    /*faltan las paw*/
+/* en este caso necesita mas ajustes que en la version movil para poder separar a los dos y cambiar los tamaños */
     .sectionHeaderQS {
         width: 100%;
         min-height: 530px;
@@ -856,7 +890,7 @@ th {
     }
 
     /*comunidad*/
-    .filtro {
+    .filtro {/*icono filtros*/
         visibility: hidden;
     }
 
@@ -868,7 +902,7 @@ th {
     .post {
         margin: 0 auto;
     }
-
+/*ajustamos los tamaños unicamente*/
     .sectionHeaderComunidad {
         width: 100%;
         min-height: 530px;
@@ -912,7 +946,10 @@ th {
 
     }
 
-    .like,
+    .like {/*parece no funcionar a pesar de estar correcto*/
+        width: 88px;
+    }
+    
     .coment {
         width: 48px;
     }
