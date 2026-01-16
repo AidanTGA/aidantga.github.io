@@ -13,17 +13,19 @@
 
 <body>
     <header class="head">
-        <nav> <img class="hMenu" src="assets/small/menu_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg" alt="menu">
+        <nav> <img class="hMenu" src="assets/small/menu_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg" alt="">
             <ul class="linksNav">
-                <li><a href="index.html"><img src="assets/large/home_48dp_000000_FILL0_wght300_GRAD0_opsz48.svg"> Home
+                <li><a href="index.html"><img src="assets/large/home_48dp_000000_FILL0_wght300_GRAD0_opsz48.svg" alt="">
+                        Home
                     </a></li>
-                <li><a href="quienes somos.html"><img
-                            src="assets/large/directions_run_48dp_000000_FILL0_wght300_GRAD0_opsz48.svg">Quienes
+                <li><a href="quienes_somos.html"><img
+                            src="assets/large/directions_run_48dp_000000_FILL0_wght300_GRAD0_opsz48.svg" alt="">Quienes
                         somos</a></li>
-                <li><a href="comunidad.html"><img
-                            src="assets/large/pets_48dp_000000_FILL0_wght300_GRAD0_opsz48.svg">Comunidad</a></li>
+                <li><a href="comunidad.html"><img src="assets/large/pets_48dp_000000_FILL0_wght300_GRAD0_opsz48.svg"
+                            alt="">Comunidad</a></li>
                 <li><a href="eventos.html"><img
-                            src="assets/large/calendar_month_48dp_000000_FILL0_wght300_GRAD0_opsz48.svg">Eventos</a>
+                            src="assets/large/calendar_month_48dp_000000_FILL0_wght300_GRAD0_opsz48.svg"
+                            alt="">Eventos</a>
                 </li>
             </ul>
         </nav>
@@ -34,127 +36,254 @@
         <!-- seccion portada comunidad -->
         <div class="sectionHeaderComunidad">
             <div class="logoCaja">
-                <img class="logo" src="assets/logo default.svg" alt="logo del club 4 patas">
+                <img class="logo" src="assets/logo_default.svg" alt="logo del club 4 patas">
             </div>
             <h1>Comunidad</h1>
         </div>
         <!-- seccion crea post -->
-        <section class="postCaja">
-            <div class="topCaja">
-                <span><img class="userFoto" src="assets/AdobeStock_1290259101.jpeg"></span>
-                <span><input type="text" aria-label="Título" class="tituloPost"></span>
-            </div>
-            <div class="bottomCaja">
-                <textarea class="textoPost" placeholder="¿Alguna novedad?"></textarea>
-                <a href="#" class="botonLimpio"> Enviar <img
-                        src="assets/small/send_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg"></a>
-            </div>
-        </section>
-        <div class="filtro">
-            <img src="assets/small/filter_alt_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg" alt="icono filtro">
-            filtro
-        </div>
-        <!-- seccion post de texto -->
-        <section class="postCaja">
-            <!-- parte verde del nombre -->
-            <div class="topCaja">
-                <span><img class="userFoto" src="assets/AdobeStock_1442007305.jpeg"></span>
-                <span>Rita Cartel <br> @Rita_doglove</span>
-                <span class="postFecha"> 12/06/2024 </span>
-            </div>
-            <!-- caja de abajo -->
-            <div class="bottomCaja">
-                <div class="textoComentario">
-                    Hoy hemos hecho una salida suave por el camino de la ribera. El grupo ha mantenido un ritmo muy
-                    cómodo y los perros han disfrutado un montón explorando las zonas de sombra. Gracias a todas las
-                    personas que habéis venido por la buena energía y la calma que habéis aportado. Ha sido un entreno
-                    sencillo, pero de esos que se recuerdan.
-                </div>
-                <div class="iconComentario"><!-- icones -->
-                    <img class="like" src="assets/small/favorite_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg">
-                    <img class="coment" src="assets/small/add_comment_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg">
-                </div>
-                <div class="line"><!-- separador --></div>
-                <div class="comentario"><!-- comentarios -->
-                    <div class="cajaUserTransparente"><!-- autor comentario. copiar de top caja -->
-                        <span><img class="userFoto" src="assets/AdobeStock_1442007305.jpeg"></span>
-                        <span>Rita Cartel <br> @Rita_doglove</span>
-                    </div>
-                    <div class="cajaTextoComentario">
-                        <p>El ambiente ha sido perfecto. Mi perro ha ido súper relajado todo el rato. Gracias por la
-                            compañía.</p>
-                    </div>
-                </div>
-                <div><!-- caja para escribir comentario -->
-                    <!-- foto perfil --><img class="userFotoComentario" src="assets/AdobeStock_1290259101.jpeg">
-                    <div class="comentarioTextarea">
-                        <!-- textarea -->
-                        <textarea class="textoPost"></textarea>
-                        <a href="#" class="botonLimpio"> Enviar <img
-                                src="assets/small/send_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg"></a>
-                    </div>
-                </div>
-            </div>
+        <div class="contenedor">
+            <aside class="filtroDskt">
+                <div class="cajaFiltro">
+                    <div class="cajaValores">
+                        <div class="valor">
+                            Fecha
+                            <div class="opcion">
+                                <div class="tipoOpcion">
+                                    <input type="checkbox" id="hoy" name="hoy" value="hoy">
+                                    <label for="hoy">hoy</label>
+                                </div>
+                                <div class="tipoOpcion">
+                                    <input type="checkbox" id="ayer" name="ayer" value="ayer">
+                                    <label for="ayer">ayer</label>
+                                </div>
+                                <div class="tipoOpcion">
+                                    <input type="checkbox" id="estasemana" name="estasenaba" value="estasemana">
+                                    <label for="estasemana">esta semana</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cajaValores">
+                            <div class="valor">
+                                Nivel
+                                <div class="opcion">
+                                    <div class="tipoOpcion">
+                                        <input type="checkbox" id="Muy_fácil" name="Muy_fácil" value="Muy_fácil">
+                                        <label for="Muy_fácil">Muy fácil</label>
+                                    </div>
+                                    <div class="tipoOpcion">
+                                        <input type="checkbox" id="Fácil" name="Fácil" value="Fácil">
+                                        <label for="Fácil">Fácil</label>
+                                    </div>
+                                    <div class="tipoOpcion">
+                                        <input type="checkbox" id="Iniciado" name="Iniciado" value="Iniciado">
+                                        <label for="Iniciado">Iniciado</label>
+                                    </div>
+                                    <div class="tipoOpcion">
+                                        <input type="checkbox" id="Retador" name="Retador" value="Retador">
+                                        <label for="Retador">Retador</label>
+                                    </div>
+                                    <div class="tipoOpcion">
+                                        <input type="checkbox" id="Dificil" name="Dificil" value="Dificil">
+                                        <label for="Dificil">Dificil</label>
+                                    </div>
+                                    <div class="tipoOpcion">
+                                        <input type="checkbox" id="Extremo" name="Extremo" value="Extremo">
+                                        <label for="Extremo">Extremo</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cajaValores">
+                            <div class="valor">
+                                Nivel
+                                <div class="opcion">
+                                    <div class="tipoOpcion">
+                                        <input type="checkbox" id="Entreno" name="Entreno" value="Entreno">
+                                        <label for="Entreno">Entreno</label>
+                                    </div>
+                                    <div class="tipoOpcion">
+                                        <input type="checkbox" id="Naturaleza" name="Naturaleza" value="Naturaleza">
+                                        <label for="Naturaleza">Naturaleza</label>
+                                    </div>
+                                    <div class="tipoOpcion">
+                                        <input type="checkbox" id="Curso" name="Curso" value="Curso">
+                                        <label for="Curso">Curso</label>
+                                    </div>
+                                    <div class="tipoOpcion">
+                                        <input type="checkbox" id="Experiencia" name="Experiencia" value="Experiencia">
+                                        <label for="Experiencia">Experiencia</label>
+                                    </div>
+                                    <div class="tipoOpcion">
+                                        <input type="checkbox" id="Ruta" name="Ruta" value="Ruta">
+                                        <label for="Ruta">Ruta</label>
+                                    </div>
+                                    <div class="tipoOpcion">
+                                        <input type="checkbox" id="Carrera" name="Carrera" value="Carrera">
+                                        <label for="Carrera">Carrera</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cajaValores">
+                                <div class="valor">
+                                    Nivel
+                                    <div class="opcion">
+                                        <div class="tipoOpcion">
+                                            <input type="checkbox" id="Ciudad" name="Ciudad" value="Ciudad">
+                                            <label for="Ciudad">Ciudad</label>
+                                        </div>
+                                        <div class="tipoOpcion">
+                                            <input type="checkbox" id="exterior" name="exterior" value="exterior">
+                                            <label for="exterior">Naturaleza</label>
+                                        </div>
+                                        <div class="tipoOpcion">
+                                            <input type="checkbox" id="Mixto" name="Mixto" value="Mixto">
+                                            <label for="Mixto">Mixto</label>
+                                        </div>
+                                        <div class="tipoOpcion">
+                                            <input type="checkbox" id="Indoors" name="Indoors" value="Indoors">
+                                            <label for="Indoors">Indoors</label>
+                                        </div>
+                                    </div>
 
-        </section>
-        <!-- seccion post de texto con imagen -->
-        <section class="postCaja">
-            <!-- parte verde del nombre -->
-            <div class="topCaja">
-                <span><img class="userFoto" src="assets/AdobeStock_1442007305.jpeg"></span>
-                <span>Rita Cartel <br> @Rita_doglove</span>
-                <span class="postFecha"> 12/06/2024 </span>
-            </div>
-            <!-- caja de abajo -->
-            <div class="bottomCaja">
-                <img class="cometarioImagen" src="assets/AdobeStock_1290259101.jpeg"
-                    alt="foto de una salida de canicross">
-                <div class="textoComentario">
-                    El grupo experimentado ha tenido hoy un entreno intenso preparando la próxima competición de
-                    canicross. Ritmo firme, buena técnica y muy buena coordinación con los perros. Gran trabajo de todos
-                    los equipos; seguimos avanzando con mucha constancia.
-                </div>
-                <div class="iconComentario"><!-- icones -->
-                    <img class="like" src="assets/small/favorite_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg">
-                    <img class="coment" src="assets/small/add_comment_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg">
-                </div>
-                <div class="line"><!-- separador --></div>
-                <div class="comentario"><!-- comentarios -->
-                    <div class="cajaUserTransparente"><!-- autor comentario. copiar de top caja -->
-                        <span><img class="userFoto" src="assets/AdobeStock_1442007305.jpeg"></span>
-                        <span>Rita Cartel <br> @Rita_doglove</span>
-                    </div>
-                    <div class="cajaTextoComentario">
-                        <p>El ambiente ha sido perfecto. Mi perro ha ido súper relajado todo el rato. Gracias por la
-                            compañía.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div><!-- caja para escribir comentario -->
-                    <!-- foto perfil --><img class="userFotoComentario" src="assets/AdobeStock_1290259101.jpeg">
-                    <div class="comentarioTextarea">
-                        <!-- textarea -->
-                        <textarea class="textoPost"></textarea>
+            </aside>
+            <div class="post">
+                <div class="postCaja">
+                    <div class="topCaja">
+                        <span><img class="userFoto" src="assets/AdobeStock_1290259101.jpeg" alt="foto usuario"></span>
+                        <span><input type="text" class="tituloPost"></span>
+                    </div>
+                    <div class="bottomCaja">
+                        <textarea class="textoPost" placeholder="¿Alguna novedad?"></textarea>
                         <a href="#" class="botonLimpio"> Enviar <img
-                                src="assets/small/send_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg"></a>
+                                src="assets/small/send_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg " alt=""></a>
+                    </div>
+                </div>
+                <div class="filtro">
+                    <img src="assets/small/filter_alt_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg" alt="icono filtro">
+                    filtro
+                </div>
+                <!-- seccion post de texto -->
+                <div class="postCaja">
+                    <!-- parte verde del nombre -->
+                    <div class="topCaja">
+                        <span><img class="userFoto" src="assets/AdobeStock_1442007305.jpeg" alt="usuario"></span>
+                        <span>Rita Cartel <br> @Rita_doglove</span>
+                        <span class="postFecha"> 12/06/2024 </span>
+                    </div>
+                    <!-- caja de abajo -->
+                    <div class="bottomCaja">
+                        <div class="textoComentario">
+                            Hoy hemos hecho una salida suave por el camino de la ribera. El grupo ha mantenido un ritmo
+                            muy
+                            cómodo y los perros han disfrutado un montón explorando las zonas de sombra. Gracias a todas
+                            las
+                            personas que habéis venido por la buena energía y la calma que habéis aportado. Ha sido un
+                            entreno
+                            sencillo, pero de esos que se recuerdan.
+                        </div>
+                        <div class="iconComentario"><!-- icones -->
+                            <img class="like" src="assets/small/favorite_24dp_r600_FILL0_wght300_GRAD0_opsz24.svg"
+                                alt="">
+                            <img class="coment" src="assets/small/add_comment_24dp_a400_FILL0_wght300_GRAD0_opsz24.svg"
+                                alt="">
+                        </div>
+                        <div class="line"><!-- separador --></div>
+                        <div class="comentario"><!-- comentarios -->
+                            <div class="cajaUserTransparente"><!-- autor comentario. copiar de top caja -->
+                                <span><img class="userFoto" src="assets/AdobeStock_1442007305.jpeg"
+                                        alt="usuario"></span>
+                                <span>Rita Cartel <br> @Rita_doglove</span>
+                            </div>
+                            <div class="cajaTextoComentario">
+                                <p>El ambiente ha sido perfecto. Mi perro ha ido súper relajado todo el rato. Gracias
+                                    por la
+                                    compañía.</p>
+                            </div>
+                        </div>
+                        <div><!-- caja para escribir comentario -->
+                            <!-- foto perfil --><img class="userFotoComentario" src="assets/AdobeStock_1290259101.jpeg"
+                                alt="user foto">
+                            <div class="comentarioTextarea">
+                                <!-- textarea -->
+                                <textarea class="textoPost"></textarea>
+                                <a href="#" class="botonLimpio"> Enviar <img
+                                        src="assets/small/send_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- seccion post de texto con imagen -->
+                <div class="postCaja">
+                    <!-- parte verde del nombre -->
+                    <div class="topCaja">
+                        <span><img class="userFoto" src="assets/AdobeStock_1442007305.jpeg" alt="user"></span>
+                        <span>Rita Cartel <br> @Rita_doglove</span>
+                        <span class="postFecha"> 12/06/2024 </span>
+                    </div>
+                    <!-- caja de abajo -->
+                    <div class="bottomCaja">
+                        <img class="cometarioImagen" src="assets/AdobeStock_1290259101.jpeg"
+                            alt="foto de una salida de canicross">
+                        <div class="textoComentario">
+                            El grupo experimentado ha tenido hoy un entreno intenso preparando la próxima competición de
+                            canicross. Ritmo firme, buena técnica y muy buena coordinación con los perros. Gran trabajo
+                            de
+                            todos
+                            los equipos; seguimos avanzando con mucha constancia.
+                        </div>
+                        <div class="iconComentario"><!-- icones -->
+                            <img class="like" src="assets/small/favorite_24dp_r600_FILL0_wght300_GRAD0_opsz24.svg"
+                                alt="">
+                            <img class="coment" src="assets/small/add_comment_24dp_a400_FILL0_wght300_GRAD0_opsz24.svg"
+                                alt="">
+                        </div>
+                        <div class="line"><!-- separador --></div>
+                        <div class="comentario"><!-- comentarios -->
+                            <div class="cajaUserTransparente"><!-- autor comentario. copiar de top caja -->
+                                <span><img class="userFoto" src="assets/AdobeStock_1442007305.jpeg" alt="user"></span>
+                                <span>Rita Cartel <br> @Rita_doglove</span>
+                            </div>
+                            <div class="cajaTextoComentario">
+                                <p>El ambiente ha sido perfecto. Mi perro ha ido súper relajado todo el rato. Gracias
+                                    por la
+                                    compañía.</p>
+                            </div>
+                        </div>
+                        <div><!-- caja para escribir comentario -->
+                            <!-- foto perfil --><img class="userFotoComentario" src="assets/AdobeStock_1290259101.jpeg"
+                                alt="user">
+                            <div class="comentarioTextarea">
+                                <!-- textarea -->
+                                <textarea class="textoPost"></textarea>
+                                <a href="#" class="botonLimpio"> Enviar <img
+                                        src="assets/small/send_24dp_000000_FILL0_wght300_GRAD0_opsz24.svg" alt=""></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-       <div class="logoBox">
-            <img class="logoFooter" src="assets/logo default.svg">
+        <div class="logoBox">
+            <img class="logoFooter" src="assets/logo_default.svg" alt="">
             <div class="extLogoBox">
-                <img src="assets/sunburst.svg">
-                <img src="assets/maountain.svg">
-                <img src="assets/naranjao.svg">
-                <img src="assets/s.svg">
+                <img src="assets/sunburst.svg" alt="">
+                <img src="assets/maountain.svg" alt="">
+                <img src="assets/naranjao.svg" alt="">
+                <img src="assets/s.svg" alt="">
             </div>
         </div>
         <div class="linkBox">
             <a href="#">Usuario</a>
-            <a href="quienes somos.html">Quienes somos</a>
+            <a href="quienes_somos.html">Quienes somos</a>
             <a href="#">FAQ</a>
             <a href="#">Servicios</a>
             <a href="#">Contacto</a>
